@@ -1,0 +1,43 @@
+<!--pages/main/answerSheet/displayAnswer/index.wxml-->
+
+<view>文法</view>
+<block wx:for="{{answer[0]}}">
+  <view>题号：{{index+1}}</view>
+  <view wx:if="{{item==0}}">
+    no answer
+  </view>
+  <view wx:elif="{{item<5&&item>0}}">
+    {{item}}
+  </view>
+  <view wx:else>
+    error
+  </view>
+</block>
+
+<view>阅读</view>
+<block wx:for="{{answer[1]}}">
+  <view>{{index+answer[0].length+1}}</view>
+  <view wx:if="{{item==0}}">
+    no answer
+  </view>
+  <view wx:elif="{{item<5&&item>0}}">
+    {{item}}
+  </view>
+  <view wx:else>
+    error
+  </view>
+</block>
+
+<view>听力</view>
+<block wx:for="{{answer[2]}}">
+  <view>{{index+answer[1].length+answer[0].length+1}}</view>
+  <view wx:if="{{item==0}}">
+    no answer
+  </view>
+  <view wx:elif="{{item<5&&item>0}}">
+    {{item}}
+  </view>
+  <view wx:else>
+    error
+  </view>
+</block>

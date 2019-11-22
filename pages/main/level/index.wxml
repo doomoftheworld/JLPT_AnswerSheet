@@ -1,0 +1,6 @@
+<view id="title">请选择你当前备考的能力考等级</view>
+<button bind:tap="handleN1">N1</button>
+<button bind:tap="handleN2">N2</button>
+<button bind:tap="handleN3">N3</button>
+<button bind:tap="handleN4">N4</button>
+<button bind:tap="handleN5">N5</button>

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/main/level/index",
+    "pages/main/level/errorMessage/index",
+    "pages/main/examDate/index",
+    "pages/main/answerSheet/index",
+    "pages/main/answerSheet/displayAnswer/index",
+    "pages/main/answerSheet/displayResult/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,3 @@
+<!--pages/main/level/errorMessage/index.wxml-->
+<view wx:for="{{errorMessage}}">{{item}}</view>
+<button bind:tap="goBack">返回等级选择界面</button>

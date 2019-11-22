@@ -1,0 +1,22 @@
+<!--pages/main/answerSheet/displayResult/displayMistake/index.wxml-->
+<view>文法</view>
+<block wx:for="{{wrongQuestion[0]}}">
+  <view>题号：{{item+1}}</view>
+  <view>正确答案：{{rightAnswer[0][item]}}</view>
+</block>
+
+<view>阅读</view>
+<block wx:for="{{wrongQuestion[1]}}">
+  <view>{{item+wrongQuestion[0].length+1}}</view>
+  <view>正确答案：{{rightAnswer[1][item]}}</view>
+</block>
+
+<view>听力</view>
+<block wx:for="{{wrongQuestion[2]}}">
+  <view wx:if="{{item<5}}">问题：1 {{item}}番</view>
+  <view wx:elif="{{item<11}}">问题：2 {{item-4}}番</view>
+  <view wx:elif="{{item<16}}">问题：3 {{item-10}}番</view>
+  <view wx:elif="{{item<28}}">问题：4 {{item-15}}番</view>
+  <view wx:else>问题：5 {{item-27}}番</view>
+  <view>正确答案：{{rightAnswer[2][item]}}</view>
+</block>

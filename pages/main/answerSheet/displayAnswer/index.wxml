@@ -2,7 +2,7 @@
 
 <view>文法</view>
 <block wx:for="{{answer[0]}}">
-  <view>题号：{{index+1}}</view>
+  <view bind:tap="changeAnswerSec0" id="{{index}}">题号：{{index+1}}</view>
   <view wx:if="{{item==0}}">
     no answer
   </view>
@@ -16,7 +16,7 @@
 
 <view>阅读</view>
 <block wx:for="{{answer[1]}}">
-  <view>{{index+answer[0].length+1}}</view>
+  <view bind:tap="changeAnswerSec1" id="{{index+answer[0].length}}">题号：{{index+answer[0].length+1}}</view>
   <view wx:if="{{item==0}}">
     no answer
   </view>
@@ -30,7 +30,13 @@
 
 <view>听力</view>
 <block wx:for="{{answer[2]}}">
-  <view>{{index+answer[1].length+answer[0].length+1}}</view>
+  <view bind:tap="changeAnswerSec2" id="{{index+answer[0].length+answer[1].length}}">
+    <view wx:if="{{index<5}}">问题：1 {{index}}番</view>
+    <view wx:elif="{{index<11}}">问题：2 {{index-4}}番</view>
+    <view wx:elif="{{index<16}}">问题：3 {{index-10}}番</view>
+    <view wx:elif="{{index<28}}">问题：4 {{index-15}}番</view>
+    <view wx:else>问题：5 {{index-27}}番</view>
+  </view>
   <view wx:if="{{item==0}}">
     no answer
   </view>

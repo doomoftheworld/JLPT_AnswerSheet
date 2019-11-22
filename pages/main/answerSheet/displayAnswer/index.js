@@ -7,7 +7,35 @@ Page({
   data: {
     answer:null,
   },
+  /*changeAnswerSec0:function(e){
+    console.log(e.target.id)
+    var pages = getCurrentPages()
+    var prePage = pages[pages.length - 2]
+    prePage.setData({
+      currentPart:0,
+      currentQuestion:e.target.id,
+    })
+    if (this.data.currentPart == 0) {
+      prePage.setData({
+        displayNumber: this.data.currentQuestion + 1,
+      })
+    } else if (this.data.currentPart == 1) {
+      prePage.setData({
+        displayNumber: this.data.currentQuestion + 55,
+      })
+    }
+    else if (this.data.currentPart == 2) {
+      prePage.setData({
+        displayNumber: this.data.currentQuestion + 76,
+      })
+    }
+    console.log(prePage.data.currentPart)
+    console.log(prePage.data.currentQuestion)
+    wx.navigateBack({
+      delta: 1,
+    })
 
+},
   /**
    * 生命周期函数--监听页面加载
    */

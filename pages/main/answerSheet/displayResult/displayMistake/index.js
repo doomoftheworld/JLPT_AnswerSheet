@@ -1,13 +1,12 @@
-// pages/main/answerSheet/displayResult/index.js
+// pages/main/answerSheet/displayResult/displayMistake/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    markByPart:[0,0,0],
-    rightAnswerByPart:[0,0,0],
-    wrongAnswer:null,
+    wrongQuestion: null,
+    rightAnswer: null,
   },
 
   /**
@@ -16,21 +15,16 @@ Page({
   onLoad: function (options) {
     var pages = getCurrentPages()
     var prePage = pages[pages.length - 2]
-    console.log(prePage)
-    console.log(prePage.data.answer)
-    this.data.markByPart[0] = (prePage.data.markByPart[0] * 1.0 / 59 * 60).toFixed(2)
-    this.data.markByPart[1] = (prePage.data.markByPart[1] * 1.0 / 55 * 60).toFixed(2)
-    this.data.markByPart[2] = (prePage.data.markByPart[2] * 1.0 / 56 * 60).toFixed(2)
     this.setData({
-      markByPart:this.data.markByPart,
-      rightAnswerByPart:prePage.data.rightAnswerByPart,
-      wrongAnswer:prePage.data.wrongAnswer,
+      wrongQuestion: prePage.data.wrongAnswer,
     })
-  },
-
-  displayMistakes:function(e){
-    wx.navigateTo({
-      url: 'displayMistake/index',
+    var appInstance=getApp()
+    var level=appInstance.globalData.level
+    console.log(level)
+    var date=appInstance.globalData.date
+    console.log(date)
+    this.setData({
+      rightAnswer:appInstance.globalData.rightAnswer[level][date]
     })
   },
 

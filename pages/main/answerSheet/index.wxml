@@ -2,7 +2,7 @@
 <button bind:tap="showAnswer">显示所有已答问题</button>
 <view wx:if="{{currentPart==0}}">
   <view>单词 文法部分</view>
-  <view>当前题号：{{currentQuestion+1}}</view>
+  <view>当前题号："{{currentQuestion+1}}"</view>
 </view>
 <view wx:if="{{currentPart==1}}">
   <view>阅读部分</view>

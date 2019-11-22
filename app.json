@@ -6,6 +6,7 @@
     "pages/main/answerSheet/index",
     "pages/main/answerSheet/displayAnswer/index",
     "pages/main/answerSheet/displayResult/index",
+    "pages/main/answerSheet/displayResult/displayMistake/index",
     "pages/index/index",
     "pages/logs/logs"
   ],

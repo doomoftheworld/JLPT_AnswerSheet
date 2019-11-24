@@ -16,6 +16,9 @@ Page({
     wrongAnswer: [[],[],[]],
     markByPart:[0,0,0],
     rightAnswerByPart:[0,0,0],
+    level:null,
+    year:null,
+    month:null,
 
   },
   showAnswer:function(e){
@@ -198,7 +201,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var appInstance=getApp()
+    var theLevel=appInstance.globalData.level
+    var date=appInstance.globalData.date
+    var dates=date.split("_")
+    this.setData({
+      level:theLevel,
+      year:dates[0],
+      month:dates[1],
+    })
   },
 
   /**

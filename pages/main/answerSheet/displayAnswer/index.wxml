@@ -1,21 +1,23 @@
 <!--pages/main/answerSheet/displayAnswer/index.wxml-->
-
-<view>文法</view>
-<block wx:for="{{answer[0]}}">
-  <view bind:tap="changeAnswerSec0" id="{{index}}">题号：{{index+1}}</view>
-  <view wx:if="{{item==0}}">
+<div class="part">文法</div>
+<div class="main">
+<div class="container" wx:for="{{answer[0]}}">
+  <text bind:tap="changeAnswerSec0" id="{{index}}">题号：{{index+1}}</text>
+  <text wx:if="{{item==0}}">
     no answer
-  </view>
-  <view wx:elif="{{item<5&&item>0}}">
+  </text>
+  <text wx:elif="{{item<5&&item>0}}">
     {{item}}
-  </view>
-  <view wx:else>
+  </text>
+  <text wx:else>
     error
-  </view>
-</block>
+  </text>
+</div>
+</div>
 
-<view>阅读</view>
-<block wx:for="{{answer[1]}}">
+<div  class="part">阅读</div>
+<div class="main">
+<div class="container" wx:for="{{answer[1]}}">
   <view bind:tap="changeAnswerSec1" id="{{index+answer[0].length}}">题号：{{index+answer[0].length+1}}</view>
   <view wx:if="{{item==0}}">
     no answer
@@ -26,12 +28,14 @@
   <view wx:else>
     error
   </view>
-</block>
+</div>
+</div>
 
-<view>听力</view>
-<block wx:for="{{answer[2]}}">
+<div  class="part">听力</div>
+<div class="main">
+<div class="container" wx:for="{{answer[2]}}">
   <view bind:tap="changeAnswerSec2" id="{{index+answer[0].length+answer[1].length}}">
-    <view wx:if="{{index<5}}">问题：1 {{index}}番</view>
+    <view wx:if="{{index<5}}">问题：1 {{index+1}}番</view>
     <view wx:elif="{{index<11}}">问题：2 {{index-4}}番</view>
     <view wx:elif="{{index<16}}">问题：3 {{index-10}}番</view>
     <view wx:elif="{{index<28}}">问题：4 {{index-15}}番</view>
@@ -46,4 +50,5 @@
   <view wx:else>
     error
   </view>
-</block>
+</div>
+</div>

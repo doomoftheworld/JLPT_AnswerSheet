@@ -1,15 +1,23 @@
 <!--pages/main/answerSheet/displayResult/index.wxml-->
-<view>您的成绩为</view>
-<view>文法 单词部分</view>
-<view>正确题数：{{rightAnswerByPart[0]}}/54</view>
-<view>得分：{{markByPart[0]}}/60</view>
-<view>阅读部分</view>
-<view>正确题数：{{rightAnswerByPart[1]}}/21</view>
-<view>得分：{{markByPart[1]}}/60</view>
-<view>听力部分</view>
-<view>正确题数：{{rightAnswerByPart[2]}}/32</view>
-<view>得分：{{markByPart[2]}}/60</view>
-<view>你的结果为</view>
-<view wx:if="{{markByPart[0]>19&&markByPart[1]>19&&markByPart[2]>19&&(markByPart[0]+markByPart[1]+markByPart[2])>90}}">合格</view>
-<view wx:else>不合格</view>
-<button bind:tap="displayMistakes">查看错题</button>
+<div class="container">
+  <view>您的成绩为</view>
+  <div class="part">
+    <view>文法 单词部分</view>
+    <view>正确题数：{{rightAnswerByPart[0]}}/54</view>
+    <view>得分：{{markByPart[0]}}/60</view>
+  </div>
+  <div class="part">
+    <view>阅读部分</view>
+    <view>正确题数：{{rightAnswerByPart[1]}}/21</view>
+    <view>得分：{{markByPart[1]}}/60</view>
+  </div>
+  <div class="part">
+    <view>听力部分</view>
+    <view>正确题数：{{rightAnswerByPart[2]}}/32</view>
+    <view>得分：{{markByPart[2]}}/60</view>
+  </div>
+  <view>你的结果为</view>
+  <view wx:if="{{markByPart[0]>19&&markByPart[1]>19&&markByPart[2]>19&&(markByPart[0]+markByPart[1]+markByPart[2])>90}}">合格</view>
+  <view wx:else>不合格</view>
+  <button bind:tap="displayMistakes">查看错题</button>
+</div>

@@ -1,1 +1,9 @@
 /* pages/main/level/errorMessage/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+button{
+  margin: 50rpx;
+}

@@ -1,22 +1,23 @@
-
-<view>请选择需要答题的真题年份</view>
-<button bind:tap="handle2010_7">2010年7月</button>
-<button bind:tap="handle2010_12">2010年12月</button>
-<button bind:tap="handle2011_7">2011年7月</button>
-<button bind:tap="handle2011_12">2011年12月</button>
-<button bind:tap="handle2012_7">2012年7月</button>
-<button bind:tap="handle2012_12">2012年12月</button>
-<button bind:tap="handle2013_7">2013年7月</button>
-<button bind:tap="handle2013_12">2013年12月</button>
-<button bind:tap="handle2014_7">2014年7月</button>
-<button bind:tap="handle2014_12">2014年12月</button>
-<button bind:tap="handle2015_7">2015年7月</button>
-<button bind:tap="handle2015_12">2015年12月</button>
-<button bind:tap="handle2016_7">2016年7月</button>
-<button bind:tap="handle2016_12">2016年12月</button>
-<button bind:tap="handle2017_7">2017年7月</button>
-<button bind:tap="handle2017_12">2017年12月</button>
-<button bind:tap="handle2018_7">2018年7月</button>
-<button bind:tap="handle2018_12">2018年12月</button>
-<button bind:tap="handle2019_7">2019年7月</button>
-<button bind:tap="goBack">返回等级选择界面</button>
+<div class="container">
+  <view>请选择需要答题的真题年份</view>
+  <button bind:tap="handle2010_7">2010年7月</button>
+  <button bind:tap="handle2010_12">2010年12月</button>
+  <button bind:tap="handle2011_7">2011年7月</button>
+  <button bind:tap="handle2011_12">2011年12月</button>
+  <button bind:tap="handle2012_7">2012年7月</button>
+  <button bind:tap="handle2012_12">2012年12月</button>
+  <button bind:tap="handle2013_7">2013年7月</button>
+  <button bind:tap="handle2013_12">2013年12月</button>
+  <button bind:tap="handle2014_7">2014年7月</button>
+  <button bind:tap="handle2014_12">2014年12月</button>
+  <button bind:tap="handle2015_7">2015年7月</button>
+  <button bind:tap="handle2015_12">2015年12月</button>
+  <button bind:tap="handle2016_7">2016年7月</button>
+  <button bind:tap="handle2016_12">2016年12月</button>
+  <button bind:tap="handle2017_7">2017年7月</button>
+  <button bind:tap="handle2017_12">2017年12月</button>
+  <button bind:tap="handle2018_7">2018年7月</button>
+  <button bind:tap="handle2018_12">2018年12月</button>
+  <button bind:tap="handle2019_7">2019年7月</button>
+  <button bind:tap="goBack">返回等级选择界面</button>
+</div>

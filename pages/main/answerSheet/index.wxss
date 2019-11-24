@@ -1,1 +1,8 @@
 /* pages/main/answerSheet/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  margin: 20rpx;
+}

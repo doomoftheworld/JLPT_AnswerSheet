@@ -1,1 +1,11 @@
 /* pages/main/answerSheet/displayResult/index.wxss */
+.container{
+  display: flex;
+  justify-content:space-around; 
+}
+view{
+  padding: 10rpx;
+}
+.part{
+  padding: 10rpx;
+}
